@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app" style="background: bisque">
+    <run v-runoob:hello.a.b="message"></run>
+</div>
+hello
+<script>
+    Vue.directive('runoob', {
+        bind: function (el, bindind, vnode) {
+            var s = JSON.stringify;
+            el.innerHTML =
+                'name:' + s(bindind.name) + '<br>' +
+
+                'value:' + s(bindind.value) + '<br>' +
+                'expression:' + s(bindind.expression) + '<br>' +
+                'argument:' + s(bindind.arg) + '<br>' +
+                'modifiers:' + s(bindind.modifiers) + '<br>' +
+                'vnode keys:' + Object.keys(vnode).join(',')
+
+        }
+        });
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message:'今天天气很好'
+        }
+    });
+</script>
+</body>
+</html>

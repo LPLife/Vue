@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<p id="p" v-html="message">name:{{name}} pass: {{pass}}</p>
+<script>
+    var data = {name: 'smith', pass: '123456', message: '<h1>hello world!</h1>'};
+    var vm = new Vue({
+        el: '#p',
+        data: data
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{message}}</p>
+    <p>{{reverseMessage()}}</p>
+    <p>{{now}}</p>
+</div>
+<script>
+    var vum = new Vue({
+        el: '#app',
+        data: {
+            message: 'runoobfe!'
+        },
+        methods: {
+            reverseMessage: function () {
+                return this.message.split('').reverse().join('')
+            }
+        },
+        computed: {
+            now: function () {
+                return Date.now()
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

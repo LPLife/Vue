@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="de">
+    <input id="in" type="checkbox">
+    <button onclick="myfunction()">确定</button>
+</div>
+<script>
+    function myfunction() {
+        var label = document.createElement('lable');
+        var x = document.createTextNode('in');
+        label.setAttribute("for", "in");
+        label.appendChild(x);
+        document.getElementById("de").insertBefore(x, document.getElementById('in'));
+
+
+    }
+</script>
+</body>
+</html>

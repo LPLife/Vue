@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<script>
+    var vm = new Vue({
+        data: {a: 1},
+        methods: {
+            data:{a:1},
+            plus: function () {
+                this.a++;
+            }
+
+        }
+    });
+    document.write(vm.aPlus);
+    document.write("<br>");
+    document.write(vm.a);
+</script>
+</body>
+</html>

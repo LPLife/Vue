@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>
+        <input v-model.tirm="message" placeholder="编辑我" type="text">
+    <p> 消息是 :{{message}}</p>
+
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: ''
+
+        }
+    })
+</script>
+
+
+</body>
+</html>

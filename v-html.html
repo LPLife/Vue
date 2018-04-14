@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="di">
+    <p id="p1">{{message}}</p>
+    <p id="p2" v-html="message"></p>
+</div>
+<script type="application/javascript">
+    new Vue({
+        el: '#di',
+        data: {
+            message: '<h1>hello world</h1>'
+        }
+    })
+</script>
+</body>
+
+</html>

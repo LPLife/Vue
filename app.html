@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <run></run>
+</div>
+<script>
+    Vue.component('async-example', function (resolve, reject) {
+        setTimeout(function () {
+            // 将组件定义传入 resolve 回调函数
+            resolve({
+                template: '<div>I am async!</div>'
+            })
+        }, 1000)
+    });
+
+    Vue.component('run', function (resolve) {
+        // 这个特殊的 require 语法告诉 webpack
+        // 自动将编译后的代码分割成不同的块，
+        // 这些块将通过 Ajax 请求自动下载。
+        require(['async-example'], resolve)
+    })
+
+
+    var vm = new Vue({
+        el:'#app',
+        data:{
+
+        }
+    });
+</script>
+</body>
+</html>

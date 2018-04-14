@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <input v-model="message">
+    <run v-bind:message="message"></run>
+</div>
+<script>
+    Vue.component('run', {
+        props: ['message'],
+        template: '<span>{{message}}</span>'
+    })
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: 'from parent'
+        }
+    });
+</script>
+</body>
+</html>

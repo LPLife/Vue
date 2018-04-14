@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p v-if="type==='A'">A</p>
+    <p v-else-if="type==='B'">B</p>
+    <p v-else-if="type==='C'">C</p>
+    <p v-else>Not A/B/C</p>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            type: 'D'
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>
+        <input v-model.lazy="message" placeholder="编辑我">
+    <p> 消息是 :{{message}}</p>
+    </p>
+    <p>
+    <p> 消息是:{{message2}}</p>
+    <textarea v-model="message2" placeholder="多行文本"></textarea>
+    </p>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: '2018-4-9',
+            message2: '你好'
+        }
+    })
+</script>
+
+
+</body>
+</html>

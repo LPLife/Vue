@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <ol>
+        <li v-for="site in sites">
+            {{site.name}}
+        </li>
+    </ol>
+    <ul>
+        <template v-for="item in sites">
+            <li>{{item.name}}</li>
+        </template>
+    </ul>
+    <ul>
+        <template v-for="item of sites">
+            <li>{{item.name}}</li>
+        </template>
+    </ul>
+    <ul>
+        <template v-for="(item,index) in sites">
+            <li>{{index}}-{{item.name}}</li>
+        </template>
+    </ul>
+    <ul>
+        <template v-for="value in sites">
+            <li>{{value}}</li>
+        </template>
+    </ul>
+    <ul>
+        <template v-for="(value,key) in sites">
+            <li>{{key}}:{{value}}</li>
+        </template>
+    </ul>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            sites: [{name: 'smith'}, {name: 'JSON'}, {name: 'admin'}]
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="checkbox" v-model="checked" id="checkbox" value="gt">
+    <label for="checkbox">{{checked}}</label>
+
+    <input type="checkbox" v-model="checkedNames" id="runoob" value="Runoob">
+    <label for="runoob">Runoob</label>
+
+    <input type="checkbox" v-model="checkedNames" id="google" value="Google">
+    <label for="google">Google</label>
+
+    <input type="checkbox" v-model="checkedNames" id="taobao" value="Taobao">
+    <label for="taobao">taobao</label>
+
+    <span>{{checkedNames}}</span>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            checked: false,
+            checkedNames: []
+        }
+    })
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

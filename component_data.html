@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <run ref="profile"></run>
+    <p id="p">smith</p>
+</div>
+<script>
+    var data = {message: 'hello'}
+    Vue.component('run', {
+        template: '<span>{{message}}</span>',
+        data: function () {
+            return data;
+        }
+
+    })
+    var vm = new Vue({
+        el: '#app',
+        data: {}
+    });
+    document.write(vm.$refs.profile.message + "<br>");
+    document.write(document.getElementById('p').innerHTML);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

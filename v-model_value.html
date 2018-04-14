@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="radio" v-model="message" value="a" id="radio">
+    <label for="radio">{{message}}</label>
+    <input type="checkbox" v-model="toggle" id="checkbox">
+    <label for="checkbox">{{toggle}}</label>
+    <select v-model="selected" id="select">
+        <option value="">请选择</option>
+        <option value="abc">ABC</option>
+    </select>
+    <label for="select">{{selected}}</label>
+
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: '',
+            toggle: false,
+            selected: ''
+        }
+    })
+
+</script>
+</body>
+</html>

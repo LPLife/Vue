@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <button @click="a += 1">add</button>
+    <p>a:{{a}}</p>
+
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            a: 1
+
+        },
+        beforeCreate: function () {
+            document.write('beforecreate:' + this.a + "<br>");
+        },
+        created: function () {
+            document.write('created:' + this.a + "<br>");
+        },
+        beforeMount: function () {
+            document.write(' beforeMount:' + this.a + "<br>");
+        },
+        mounted: function () {
+            document.write('mounted:' + this.a + "<br>");
+        },
+        beforeUpdate: function () {
+            document.write('beforeUpdate:' + this.a + "<br>");
+        },
+        updated: function () {
+            document.write('updated:' + this.a + "<br>");
+        },
+        beforeDestroy: function () {
+            document.write('beforeDestroy:' + this.a + "<br>");
+        },
+        destroyed: function () {
+            document.write('destroyed:' + this.a + "<br>");
+        },
+        errorCaptured: function () {
+            document.write('errorCaptured:' + this.a + "<br>");
+        }
+    });
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

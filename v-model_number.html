@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>
+        <input v-model.number="age" placeholder="编辑我" type="number">
+    <p> 消息是 :{{age}}</p>
+
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            age: ''
+
+        }
+    })
+</script>
+
+
+</body>
+</html>

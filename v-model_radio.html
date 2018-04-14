@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="radio" id="runnob" value="Runoob" v-model="message">
+    <label for="runnob">Runoob</label>
+    <br>
+    <input type="radio" id="taobao" value="taobao" v-model="message">
+    <label for="taobao">tobao</label>
+    <span>选中值为: {{ message }}</span>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: '购物'
+        }
+    })
+</script>
+</body>
+</html>

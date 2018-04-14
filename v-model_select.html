@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <select v-model="selected">
+        <option value="">请选择</option>
+        <option value="shanghai">上海</option>
+        <option value="beijing">北京</option>
+        <option value="guangzhou">广州</option>
+    </select>
+    <div>
+        选中值:{{selected}}
+    </div>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            selected: ''
+        }
+    })
+</script>
+</body>
+</html>

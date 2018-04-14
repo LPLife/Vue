@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="add">add</button>
+    <p>{{counter}}</p>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            counter: 0
+        },
+        methods: {
+            add: function () {
+                this.counter++;
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

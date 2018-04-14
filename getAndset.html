@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>name:{{name}}</p>
+    <p>pass:{{pass}}</p>
+
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'smith',
+            pass: '123456'
+        },
+        computed: {
+            site: {
+                get: function () {
+                    return this.name + '' + this.pass;
+                },
+                set: function (newValue) {
+                    var names = newValue.split(' ');
+                    this.name = names[0];
+                    this.pass = names[1];
+                }
+            }
+        }
+    });
+    vm.site = "admin 7890";
+</script>
+</body>
+</html>

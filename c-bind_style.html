@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p v-bind:style="[styleObject,bg]">上海</p>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            styleObject: {
+                color: 'red',
+                fontSize: '40px'
+            },
+            bg: {
+                background: 'bisque'
+            }
+        }
+    });
+</script>
+</body>
+</html>

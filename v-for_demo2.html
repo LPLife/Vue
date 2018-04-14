@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul style="background: aquamarine">
+        <li v-for="item in items">{{item.message}}</li>
+    </ul>
+    <ul style="background:palevioletred">
+        <li v-for="value in person">{{value}}</li>
+    </ul>
+    <ul style="background:darkseagreen">
+        <li v-for="(value,key,index) in person">{{index}}-{{key}}:{{value}}</li>
+    </ul>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            items: [
+                {message: 'Foo'},
+                {message: 'Bar'}
+            ],
+            person: {
+                'name': 'smith',
+                age: 24
+            }
+        }
+    });
+    vm.items.push({message: 'bar'});
+    vm.person['adress'] = 'shanghai';
+    Vue.set(vm.person, 'add', '45');
+    vm.$set(vm.items, 'message', 'pot')
+    vm.person = Object.assign({},vm.person,{
+         k:4,
+         key:123456
+     })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

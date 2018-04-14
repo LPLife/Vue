@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <compoent v-bind:is="curr"></compoent>
+    <my-message></my-message>
+</div>
+<script>
+    Vue.component('myMessage', {
+        template: '<h1>hello</h1>'
+    })
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            curr: 'posts'
+        },
+        components: {
+            home: {template: '<h1>1</h1>'},
+            posts: {template: '<h1>2</h1>'},
+            other: {template: '<h1>3</h1>'}
+        }
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

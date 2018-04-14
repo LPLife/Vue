@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<script>
+    var vm = new Vue({
+        data: {a: 1},
+        computed: {
+            // 仅读取
+            aDouble: function () {
+                return this.a * 2
+            },
+            // 读取和设置
+            aPlus: {
+                get: function () {
+                    return this.a + 1
+                },
+                set: function (v) {
+                    this.a = v - 1
+                }
+            }
+        }
+    });
+    vm.aPlus=4;
+    document.write(vm.aPlus + "<br>"); // => 2
+    document.write(vm.aPlus + "<br>");//2
+    document.write(vm.a + "<br>");       // => 1
+    document.write(vm.aDouble + "<br>"); // =>
+</script>
+</body>
+</html>

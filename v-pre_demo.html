@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+<style>
+    [v-cloak]{
+        display: none;
+    }
+
+</style>
+</head>
+<body>
+<div id="app">
+    <p v-cloak>{{name}}</p>
+    <p v-pre> {{name}}</p>
+    <p> {{name}}</p>
+    <!-- 单个元素 -->
+    <span v-once>This will never change: {{name}}</span>
+    <!-- 有子元素 -->
+    <div v-once>
+        <h1>comment</h1>
+        <p>{{name}}</p>
+    </div>
+    <!-- 组件 -->
+    <my-component v-once :comment="name"></my-component>
+    <!-- `v-for` 指令-->
+    <ul>
+        <li v-for="i in list" v-once>{{i}}</li>
+    </ul>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'smith'
+        }
+    });
+
+</script>
+</body>
+</html>

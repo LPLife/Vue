@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li :key="text">{{text}}</li>
+
+    </ul>
+    <run-me ref ="profile"> world</run-me>
+</div>
+<script>
+    Vue.component('runMe',{
+        template:'<h1>hello</h1>'
+    })
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            text:'h',
+            items:{
+                name:'smith',
+                age:23,
+            }
+        }
+    });
+    vm.$refs.profile.innerHTML ='hello world';
+    document.write(vm.$refs.profile.innerHTML);
+    document.write(vm.$refs.profile.parentNode);
+</script>
+</body>
+</html>

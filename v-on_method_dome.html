@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="greet">Greet</button>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            name: 'smith'
+        },
+        methods: {
+            greet: function (event) {
+                document.write("hello  " + this.name);
+                document.write("<br>")
+                if (event) {
+                    document.write("tagName:" + event.target.tagName)
+                }
+            }
+        }
+
+    });
+    /*vm.greet();*/
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
